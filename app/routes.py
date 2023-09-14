@@ -6,4 +6,14 @@ from app import app
 @app.route('/index')
 #1个视图函数
 def index():
-	return "Hello,World!"#返回一个字符串
+	user = {'username': 'LXP'}
+	return '''
+	<html>
+		<head>
+			<title>Home Page - Microblog</title>
+		<head>
+		<body>
+			<h1>Hello,''' + user['username'] + '''!</h1>
+		<body>
+	</html>
+	'''
